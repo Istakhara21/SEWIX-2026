@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+@theme {
+  --color-blue:      #0067B2;
+  --color-blue-dk:   #00508a;
+  --color-blue-lt:   #e6f2fa;
+  --color-ink:       #111417;
+  --color-ink-2:     #3a4050;
+  --color-ink-3:     #7a8494;
+  --color-line:      #e8eaed;
+  --color-bg:        #f7f8fa;
+  --color-green:     #128a3c;
+  --color-green-lt:  #e8f6ee;
+  --color-red:       #cc1f0e;
+  --color-amber:     #c9820a;
+  --color-wa:        #1fae56;
+
+  --font-sans: 'Barlow', sans-serif;
+  --font-condensed: 'Barlow Condensed', sans-serif;
+}
