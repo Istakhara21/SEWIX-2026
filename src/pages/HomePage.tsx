@@ -2,14 +2,29 @@ import useProducts from "../hooks/useProducts";
 
 const HomePage = () => {
   //calling the hook (useProducts)
-  const data = useProducts();
+  const { products, loading, error } = useProducts(); // destructuring
 
-  console.log(data);
+  //loading state
+  if (loading) return "data is loading";
+
+  //error state
+  if(error) return error;
+
+  console.log(products);
 
   return (
-    <div className="font-sans bg-bg min-h-screen">
-      <h1 className="text-blue font-bold text-4xl p-8">SEWIX is alive ✓</h1>
-      <h1>Hello World</h1>
+    <div>
+      <div>
+        {products.map((product) => (
+          <div key={product.id}>
+            <h1 className="text-blue font-bold text-4xl">{product.name}</h1>
+            <h2 className="text-blue font-bold">{product.price}</h2>
+            <h2 className="text-blue font-bold">{product.mrp}</h2>
+            <h2 className="text-blue font-bold">{product.category}</h2>
+            <h2 className="text-blue font-bold">{product.description}</h2>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

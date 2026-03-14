@@ -49,3 +49,4 @@ Copy the exact error text and search it. Add the technology name — so "Firebas
 Before Stack Overflow, check the official documentation. Firebase errors especially are well documented.
 * Step 5 — Understand the fix before applying it
 Don't copy a solution you don't understand. If you don't understand it, you'll hit the same problem again in a different form.
+

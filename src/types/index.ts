@@ -7,7 +7,7 @@ export type Product = {
   mrp?: number;
   discount: number;
   category: string;
-  inStock: boolean;
+  instock: boolean;
   description: string;
   createdAt: Timestamp;
   id: string;
