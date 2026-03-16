@@ -1,3 +1,4 @@
+import ProductCard from "../components/ProductCard";
 import useProducts from "../hooks/useProducts";
 
 const HomePage = () => {
@@ -8,23 +9,19 @@ const HomePage = () => {
   if (loading) return "data is loading";
 
   //error state
-  if(error) return error;
+  if (error) return error;
 
   console.log(products);
 
   return (
     <div>
-      <div>
-        {products.map((product) => (
-          <div key={product.id}>
-            <h1 className="text-blue font-bold text-4xl">{product.name}</h1>
-            <h2 className="text-blue font-bold">{product.price}</h2>
-            <h2 className="text-blue font-bold">{product.mrp}</h2>
-            <h2 className="text-blue font-bold">{product.category}</h2>
-            <h2 className="text-blue font-bold">{product.description}</h2>
-          </div>
-        ))}
-      </div>
+      {products.map((product) => (
+        <ProductCard
+          key={product.id}
+          product={product}
+          onAddToCart={(p) => console.log(p.name)}
+        />
+      ))}
     </div>
   );
 };

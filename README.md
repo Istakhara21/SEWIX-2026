@@ -50,3 +50,28 @@ Before Stack Overflow, check the official documentation. Firebase errors especia
 * Step 5 — Understand the fix before applying it
 Don't copy a solution you don't understand. If you don't understand it, you'll hit the same problem again in a different form.
 
+# The order we build in
+Design tokens (already done)
+       ↓
+Reusable UI components (Button, Badge)
+       ↓
+Layout components (Sidebar, Header, BottomNav)
+       ↓
+ProductCard component
+       ↓
+HomePage wired with real data
+       ↓
+CategoryPage
+       ↓
+SearchPage
+
+
+# git 003
+Quick review of what you've built
+Let's acknowledge what's actually working right now:
+
+Firestore → useProducts hook → HomePage → ProductCard — the full data pipeline
+TypeScript types enforcing the contract at every step
+Props flowing correctly from page to component
+Separation of concerns — hook fetches, page orchestrates, component displays
+Error and loading states handled
