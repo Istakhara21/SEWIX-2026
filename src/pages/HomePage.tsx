@@ -1,5 +1,6 @@
 import ProductCard from "../components/ProductCard";
 import useProducts from "../hooks/useProducts";
+import CategoryPage from "./CategoryPage";
 
 const HomePage = () => {
   //calling the hook (useProducts)
@@ -11,10 +12,20 @@ const HomePage = () => {
   //error state
   if (error) return error;
 
-  console.log(products);
+
 
   return (
     <div>
+      <div>
+        <CategoryPage />
+      </div>
+      {products.map((product) => (
+        <ProductCard
+          key={product.id}
+          product={product}
+          onAddToCart={(p) => console.log(p.name)}
+        />
+      ))}
       {products.map((product) => (
         <ProductCard
           key={product.id}

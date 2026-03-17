@@ -10,7 +10,7 @@ const ProductCard = ({product, onAddToCart}:ProductCardProps) => {
     <div className="border-2">
       <div>
         <h2>{product.discount}</h2>
-        <img src="" alt="" />
+        {/* <img src="" alt="" /> */}
       </div>
       <div>
         <h2>{product.brand}</h2>

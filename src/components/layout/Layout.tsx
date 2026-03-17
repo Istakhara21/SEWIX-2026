@@ -5,15 +5,15 @@ import BottomNav from "./BottomNav";
 
 const Layout = () => {
   return (
-    <div>
-      <div>
-        <Header />
-        <Sidebar />
+    <div className="flex flex-col min-h-screen">
+      <Header /> {/* full width top */}
+      <div className="flex flex-1 md:ml-16 lg:ml-60">
+        <Sidebar /> {/* left, below header */}
+        <main className="flex-1">
+          <Outlet /> {/* page content */}
+        </main>
       </div>
-      <Outlet />
-      <div>
-        <BottomNav />
-      </div>
+      <BottomNav /> {/* mobile only bottom */}
     </div>
   );
 };

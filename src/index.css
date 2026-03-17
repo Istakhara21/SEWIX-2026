@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 @theme {
+  --header-height: 54px;
   --color-blue:      #0067B2;
   --color-blue-dk:   #00508a;
   --color-blue-lt:   #e6f2fa;
